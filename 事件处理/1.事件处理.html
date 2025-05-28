@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件基本使用</title>
+    <!-- 开发环境版本（包含警告） -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>欢迎来到{{ name }}学习</h2>
+        <!-- 非简写-->
+        <!-- <button v-on:click="showInfo">点我提示信息</button>-->
+        <!--简写-->
+        <button @click="showInfo">点我提示信息</button>
+        cehsi neir
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    new Vue({
+        el: '#root',
+        data: {
+            name: '<UNK>',
+        },
+        methods: {
+            showInfo(event) {
+                // alert('<UNK>');
+                console.log(this)
+                console.log(event)
+            },
+            showInfo2(event) {
+                console.log('showInfo2')
+            }
+        }
+    })
+</script>
+</html>
